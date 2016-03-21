@@ -1,0 +1,25 @@
+<md-content layout-padding>
+    <md-grid-list 
+    md-cols-gt-md="5" 
+    md-cols="3" 
+    md-cols-md="4" 
+    md-row-height-gt-md="1:1" 
+    md-row-height="4:3" 
+    md-gutter-gt-md="16px"
+    md-gutter-md="10px" 
+    md-gutter="6px">
+        <md-grid-tile 
+        class="brand-logo"
+        ng-click="$ctrl.selectBrand(brand)"
+        ng-repeat="brand in $ctrl.brands" 
+        md-colspan-gt-sm="1" 
+        md-rowspan-gt-sm="1" 
+        ng-style="{
+            'background-image': 'url(' + brand.logo + ')',
+            'background-size': 'contain',
+            'background-repeat': 'no-repeat',
+            'background-position': 'center center'
+          }">
+        </md-grid-tile>
+    </md-grid-list>
+</md-content>
